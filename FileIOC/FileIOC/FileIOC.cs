@@ -24,8 +24,9 @@ namespace FileIOC
             for (int i = 0; i < num1.Length; i++)
             {
                 sum += num2[i];
+                Console.Write(num2[i] + " ");
             }
-            Console.WriteLine("sum" + sum);
+            Console.WriteLine("sum: " + sum);
             Console.ReadKey();
 
         }
