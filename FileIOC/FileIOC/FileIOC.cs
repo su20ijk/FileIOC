@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace FileIOC
 {
@@ -9,7 +7,8 @@ namespace FileIOC
     {
         public static void Main(string[] args)
         {
-
+            Console.WriteLine("What is the name of the file?");
+            String name = "jhghj";
         }
     }
 }
