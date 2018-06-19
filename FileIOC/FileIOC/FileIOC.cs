@@ -35,6 +35,7 @@ namespace FileIOC
             { 
                 Console.WriteLine(x);
             }
+            Console.ReadKey();
 
         }
     }
