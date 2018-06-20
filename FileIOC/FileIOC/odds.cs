@@ -15,8 +15,9 @@ public class Class1
         int sum = 0;
         for (int i = 1; i < lines.Length; i += 2)
         {
-            sum += num[i]; 
+            Console.WriteLine(num[i] + ", "); 
         }
+        
 
     }
 }
