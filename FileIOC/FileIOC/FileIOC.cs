@@ -10,7 +10,6 @@ namespace FileIOC
         public static void Main(string[] args)
         {
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            Console.WriteLine(path);
             Console.WriteLine("What is the file name?");
             string filename = Console.ReadLine();
             path += "\\" + filename + ".txt";
