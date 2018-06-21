@@ -23,7 +23,11 @@ namespace FileIOC
             System.IO.StreamWriter file = new System.IO.StreamWriter(outPath);
             foreach(string line in lines)
             {
+                int temp = Int32.Parse(line);
+                if (temp % 2 == 0)
+                {
                 file.WriteLine(line);
+                }
             }
             file.Close();
         }
