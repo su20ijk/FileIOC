@@ -1,13 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace FileIOC
 {
-    public class Class
+    public class EveryFifth
     {
         public static void Main(string[] args)
         {
@@ -24,8 +22,9 @@ namespace FileIOC
                 if (isNum == true)
                 {
                     Console.WriteLine(Num);
-                }
+                }     
             }
             Console.ReadKey();
         }
+    }
 }
