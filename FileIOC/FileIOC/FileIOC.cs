@@ -25,7 +25,7 @@ namespace FileIOC
             {
                 file.WriteLine(line);
             }
-
+            file.Close();
         }
     }
 }
