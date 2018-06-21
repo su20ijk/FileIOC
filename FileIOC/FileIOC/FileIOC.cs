@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace FileIOC
 {
-    public class FileIOC
+    public class EveryFifth
     {
         public static void Main(string[] args)
         {
