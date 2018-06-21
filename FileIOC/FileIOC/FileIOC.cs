@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FileIOC
 {
-    public class FileIOC
+    public class Evens
     {
         public static void Main(string[] args)
         {
