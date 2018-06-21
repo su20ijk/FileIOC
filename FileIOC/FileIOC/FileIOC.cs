@@ -11,21 +11,21 @@ namespace FileIOC
     {
         public static void Main(string[] args)
         {
-
-            Console.WriteLine("please enter the name of the file:");
-            string fileName = Console.ReadLine();
-            string[] lines = System.IO.File.ReadAllLines(fileName);
-            int[] num = new int[lines.Length];
-            for (int i = 0; i < num.Length; i++)
+            Console.WriteLine("please enter the name of the input file:");
+            string inputFileName = Console.ReadLine();
+            var inPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            inPath += "/"+inputFileName+".txt";
+            Console.WriteLine("please enter the name of the output file:");
+            string outFileName = Console.ReadLine();
+            var outPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            outPath += "/" + outFileName + ".txt";
+            string[] lines = System.IO.File.ReadAllLines(inPath);
+            System.IO.StreamWriter file = new System.IO.StreamWriter(outPath);
+            foreach(string line in lines)
             {
-                num[i] = Convert.ToInt32(lines[i]);
+                file.WriteLine(line);
             }
-            for (int i = 1; i < lines.Length; i += 2)
-            {
-                Console.Write(num[i] + ", ");
-            }
-            Console.ReadKey();
-
+            file.Close();
         }
     }
 }
