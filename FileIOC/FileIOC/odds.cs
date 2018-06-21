@@ -1,8 +1,8 @@
 ﻿using System;
 
-public class Class1
+public class odds
 {
-	public Class1()
+	public odds()
 	{
         Console.WriteLine("please enter the name of the file:");
         string fileName = Console.ReadLine();
@@ -12,12 +12,11 @@ public class Class1
         {
             num[i] = Convert.ToInt32(lines[i]);
         }
-        int sum = 0;
         for (int i = 1; i < lines.Length; i += 2)
         {
-            Console.WriteLine(num[i] + ", "); 
+            Console.Write(num[i] + ", "); 
         }
-        
+        Console.ReadKey();
 
     }
 }

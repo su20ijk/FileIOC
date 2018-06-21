@@ -14,9 +14,17 @@ namespace FileIOC
 
             Console.WriteLine("please enter the name of the file:");
             string fileName = Console.ReadLine();
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            path += "/"+fileName+".txt";
-            string[] lines = System.IO.File.ReadAllLines(path);
+            string[] lines = System.IO.File.ReadAllLines(fileName);
+            int[] num = new int[lines.Length];
+            for (int i = 0; i < num.Length; i++)
+            {
+                num[i] = Convert.ToInt32(lines[i]);
+            }
+            for (int i = 1; i < lines.Length; i += 2)
+            {
+                Console.Write(num[i] + ", ");
+            }
+            Console.ReadKey();
 
         }
     }
