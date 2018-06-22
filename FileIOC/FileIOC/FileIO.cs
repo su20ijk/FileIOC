@@ -9,7 +9,7 @@ namespace FileIOC
 {
     public class FileIO
     {
-        public void sum(string[] lines, System.IO.StreamWriter file)
+        public static void Sum(string[] lines, System.IO.StreamWriter file)
         {
             int[] num = new int[lines.Length];
             for (int i = 0; i < lines.Length; i++)
@@ -26,7 +26,7 @@ namespace FileIOC
             file.Close();
         }
 
-        public void writeAll(string[] lines, System.IO.StreamWriter file)
+        public static void WriteAll(string[] lines, System.IO.StreamWriter file)
         {
             file.WriteLine("Numbers in file:");
             foreach (string x in lines)
@@ -34,7 +34,9 @@ namespace FileIOC
                 file.WriteLine(x);
             }
             file.Close();
-        public void odds(string[] lines, System.IO.StreamWriter file)
+        }
+
+        public static void Odds(string[] lines, System.IO.StreamWriter file)
         {
             int[] nums = new int[lines.Length];
             for (int i = 0; i < lines.Length; i++)
