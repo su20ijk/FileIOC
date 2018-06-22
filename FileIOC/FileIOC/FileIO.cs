@@ -9,7 +9,7 @@ namespace FileIOC
 {
     public class FileIO
     {
-        public void odds(string[] lines, System.IO.StreamWriter file)
+        public static void Odds(string[] lines, System.IO.StreamWriter file)
         {
             int[] nums = new int[lines.Length];
             for (int i = 0; i < lines.Length; i++)
@@ -21,6 +21,22 @@ namespace FileIOC
                 }
             }
             file.Close();
+        }
+        public static void DivThree(string[] lines, StreamWriter file)
+        {
+            string outputNum = "";
+            for (int i = 0; i < lines.Length; i++)
+            {
+                Int32.TryParse(lines[i], out int x);
+                if (x % 3 == 0)
+                {
+                    outputNum += x + "\n";
+                }
+            }
+            using (file)
+            {
+                file.WriteLine(outputNum);
+            }
         }
     }
 }

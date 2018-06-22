@@ -20,9 +20,10 @@ namespace FileIOC
             var outPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             outPath += "/" + outFileName + ".txt";
             string[] lines = System.IO.File.ReadAllLines(inPath);
-            System.IO.StreamWriter file = new System.IO.StreamWriter(outPath);
+            StreamWriter file = new StreamWriter(outPath);
             FileIO x = new FileIO();
-            x.odds(lines, file);
+            FileIO.Odds(lines, file);
+            FileIO.DivThree(lines, file);
         }
     }
 }
