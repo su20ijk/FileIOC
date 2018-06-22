@@ -28,7 +28,6 @@ namespace FileIOC
             outPath += "/" + outFileName + ".txt";
             string[] lines = System.IO.File.ReadAllLines(inPath);
             System.IO.StreamWriter file = new System.IO.StreamWriter(outPath);
-            FileIO x = new FileIO();
             Console.WriteLine("1-List\n2-sum\n3-even\n4-odd\n5-fifth\n6-div by three");
             string option = Console.ReadLine();
             int intTemp = Convert.ToInt32(option);
@@ -48,7 +47,7 @@ namespace FileIOC
 
                 case 4:
 
-                    x.odds(lines, file);
+                    FileIO.Odds(lines, file);
 
                     break;
 
@@ -57,7 +56,7 @@ namespace FileIOC
                     break;
 
                 case 6:
-
+                    FileIO.DivThree(lines, file);
                     break;
 
                 default:
