@@ -9,17 +9,31 @@ namespace FileIOC
 {
     public class FileIO
     {
-        public static void Main(string[] args)
+        public void sum(string[] lines, System.IO.StreamWriter file)
         {
-
-            Console.WriteLine("Please enter the name of the file:");
-            string fileName = Console.ReadLine();
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            path += "/" + fileName + ".txt";
-            string[] lines = System.IO.File.ReadAllLines(path);
-            
-            Console.ReadKey();
-
+            int[] num = new int[lines.Length];
+            for (int i = 0; i < lines.Length; i++)
+            {
+                num[i] = Convert.ToInt32(lines[i]);
+            }
+            file.WriteLine("Sum:");
+            int sum = 0;
+            foreach (int x in num)
+            {
+                sum += x;
+            }
+            file.WriteLine(sum);
+            file.Close();
         }
+
+        public void writeAll(string[] lines, System.IO.StreamWriter file)
+        {
+            file.WriteLine("Numbers in file:");
+            foreach (string x in lines)
+            {
+                file.WriteLine(x);
+            }
+            file.Close();
+        }
+
     }
-}
