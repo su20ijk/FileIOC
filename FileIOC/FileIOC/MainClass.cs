@@ -36,7 +36,7 @@ namespace FileIOC
                     FileIO.WriteAll(lines, file);
                     break;
                 case 3:
-
+                    FileIO.Evens(lines, file);
                     break;
 
                 case 4:
