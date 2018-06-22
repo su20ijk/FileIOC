@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace FileIOC
 {
-    public static class VanessaEveryFifth
+    public class VanessaEveryFifth
     {
-        public static void fifth(string[] lines, System.IO.Stream.Writer File)
+        public void Fifth(string[] lines, System.IO.StreamWriter file)
         {
             int counter = 0;
             string[] answer = new string[lines.Length % 5];
@@ -16,11 +17,12 @@ namespace FileIOC
                 answer[counter] = lines[i];
                 counter++;
             }
-            Console.WriteLine("Every fifth number:");
+            file.WriteLine("Every fifth number:");
             foreach (string i in answer)
             {
-                Console.WriteLine(i);
+                file.WriteLine(i);
             }
+            file.Close();
         }
     }
 }

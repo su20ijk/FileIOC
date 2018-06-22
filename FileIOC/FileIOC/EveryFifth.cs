@@ -9,13 +9,12 @@ namespace FileIOC
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Please enter the name of the file:");
+            string fileName = Console.ReadLine();
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            Console.WriteLine("What is the file name?");
-            string filename = Console.ReadLine();
-            path += "\\" + filename + ".txt";
-            string[] lines = File.ReadAllLines(path);
-            VanessaEveryFifth.fifth(lines);
-
+            path += "/" + fileName + ".txt";
+            string[] lines = System.IO.File.ReadAllLines(path);
+            VanessaEveryFifth.Fifth(lines);
             
         }
     }
