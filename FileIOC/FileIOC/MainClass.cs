@@ -48,7 +48,7 @@ namespace FileIOC
                     break;
 
                 case 6:
-
+                    FileIO.DivThree(lines, file);
                     break;
 
                 default:
