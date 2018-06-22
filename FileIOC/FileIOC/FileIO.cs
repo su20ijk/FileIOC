@@ -9,7 +9,7 @@ namespace FileIOC
 {
     public class FileIO
     {
-        public void odds(string[] lines, System.IO.StreamWriter file)
+        public static void odds(string[] lines, System.IO.StreamWriter file)
         {
             int[] nums = new int[lines.Length];
             for (int i = 0; i < lines.Length; i++)
