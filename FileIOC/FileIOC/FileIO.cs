@@ -36,6 +36,7 @@ namespace FileIOC
             using (file)
             {
                 file.WriteLine(outputNum);
+                file.Close();
             }
         }
     }
