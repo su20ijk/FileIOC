@@ -22,7 +22,27 @@ namespace FileIOC
             string[] lines = System.IO.File.ReadAllLines(inPath);
             System.IO.StreamWriter file = new System.IO.StreamWriter(outPath);
             FileIO x = new FileIO();
-            x.odds(lines, file);
+            Console.WriteLine("1-List\n2-sum\n3-even\n4-odd\n5-fifth\n6-div by three");
+            string option = Console.ReadLine();
+            int intTemp = Convert.ToInt32(option);
+            switch (intTemp)
+            {
+                case 1:
+                    break; 
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    x.odds(lines, file);
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
