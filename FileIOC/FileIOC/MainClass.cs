@@ -35,7 +35,6 @@ namespace FileIOC
                 case 2:
                     FileIO.WriteAll(lines, file);
                     break;
-
                 case 3:
 
                     break;
