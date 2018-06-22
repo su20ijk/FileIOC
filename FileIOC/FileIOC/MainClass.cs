@@ -1,13 +1,8 @@
 ﻿using System;
-
 using System.Collections.Generic;
-
 using System.IO;
-
 using System.Linq;
-
 using System.Reflection;
-
 using System.Threading.Tasks;
 
 
@@ -34,11 +29,11 @@ namespace FileIOC
             switch (intTemp)
             {
                 case 1:
-
+                    FileIO.Sum(lines, file);
                     break;
 
                 case 2:
-
+                    FileIO.WriteAll(lines, file);
                     break;
 
                 case 3:
@@ -46,9 +41,7 @@ namespace FileIOC
                     break;
 
                 case 4:
-
                     FileIO.Odds(lines, file);
-
                     break;
 
                 case 5:
