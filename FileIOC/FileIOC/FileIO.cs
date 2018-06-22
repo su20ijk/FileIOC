@@ -49,5 +49,17 @@ namespace FileIOC
             }
             file.Close();
         }
+        public static void Evens(string[] lines, System.IO.StreamWriter file) 
+        {
+            foreach(string line in lines)
+            {
+                int temp = Int32.Parse(line);
+                if (temp % 2 == 0)
+                {
+                file.WriteLine(line);
+                }
+            }
+            file.Close();
+        }
 }
     }
