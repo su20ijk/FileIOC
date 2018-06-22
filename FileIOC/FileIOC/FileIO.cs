@@ -34,6 +34,18 @@ namespace FileIOC
                 file.WriteLine(x);
             }
             file.Close();
+        public void odds(string[] lines, System.IO.StreamWriter file)
+        {
+            int[] nums = new int[lines.Length];
+            for (int i = 0; i < lines.Length; i++)
+            {
+                nums[i] = int.Parse(lines[i]);
+                if ((nums[i] - 1) % 2 == 0)
+                {
+                    file.WriteLine(nums[i]);
+                }
+            }
+            file.Close();
         }
-
+}
     }
