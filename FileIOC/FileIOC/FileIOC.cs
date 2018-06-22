@@ -7,20 +7,10 @@ using System.Threading.Tasks;
 
 namespace FileIOC
 {
-    public class Evens
+    public class FileIO
     {
-        public static void Main(string[] args)
+        public void Evens(string[] lines, System.IO.StreamWriter file) 
         {
-            Console.WriteLine("please enter the name of the input file:");
-            string inputFileName = Console.ReadLine();
-            var inPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            inPath += "/"+inputFileName+".txt";
-            Console.WriteLine("please enter the name of the output file:");
-            string outFileName = Console.ReadLine();
-            var outPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            outPath += "/" + outFileName + ".txt";
-            string[] lines = System.IO.File.ReadAllLines(inPath);
-            System.IO.StreamWriter file = new System.IO.StreamWriter(outPath);
             foreach(string line in lines)
             {
                 int temp = Int32.Parse(line);
