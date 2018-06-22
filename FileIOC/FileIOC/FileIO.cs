@@ -9,7 +9,7 @@ namespace FileIOC
 {
     public class FileIO
     {
-        public void Evens(string[] lines, System.IO.StreamWriter file) 
+        public static void Evens(string[] lines, System.IO.StreamWriter file) 
         {
             foreach(string line in lines)
             {
