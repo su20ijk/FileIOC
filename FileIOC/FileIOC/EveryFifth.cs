@@ -14,13 +14,7 @@ namespace FileIOC
             string filename = Console.ReadLine();
             path += "\\" + filename + ".txt";
             string[] lines = File.ReadAllLines(path);
-            //possible menu for each part of the problem
-
-            //if they choose Vanessa
-            string[] result = VanessaEveryFifth.fifth(lines);
-            Console.WriteLine();
-            //Write to file
-
+            VanessaEveryFifth.fifth(lines);
 
             
         }

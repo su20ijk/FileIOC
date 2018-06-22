@@ -7,16 +7,20 @@ namespace FileIOC
 {
     public static class VanessaEveryFifth
     {
-        public static string[] fifth(string[] numbers)
+        public static void fifth(string[] lines, System.IO.Stream.Writer File)
         {
             int counter = 0;
-            string[] answer = new string[numbers.Length % 5];
-            for (int i = 4; i < numbers.Length; i += 5)
+            string[] answer = new string[lines.Length % 5];
+            for (int i = 4; i < lines.Length; i += 5)
             {
-                answer[counter] = numbers[i];
+                answer[counter] = lines[i];
                 counter++;
             }
-            return answer;
+            Console.WriteLine("Every fifth number:");
+            foreach (string i in answer)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
