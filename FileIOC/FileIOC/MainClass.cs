@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FileIOC
 {
-    public class Odds2
+    public class MainClass
     {
         public static void Main(string[] args)
         {
@@ -21,16 +21,8 @@ namespace FileIOC
             outPath += "/" + outFileName + ".txt";
             string[] lines = System.IO.File.ReadAllLines(inPath);
             System.IO.StreamWriter file = new System.IO.StreamWriter(outPath);
-            int[] nums = new int[lines.Length];
-            for (int i = 0; i < lines.Length; i++)
-            {
-                nums[i] = int.Parse(lines[i]);
-                if ((nums[i] - 1) % 2 == 0)
-                {
-                    file.WriteLine(nums[i]);
-                }
-            }
-            file.Close();
+            FileIO x = new FileIO();
+            x.odds(lines, file);
         }
     }
 }
