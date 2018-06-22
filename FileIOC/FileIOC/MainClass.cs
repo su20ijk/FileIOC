@@ -44,7 +44,7 @@ namespace FileIOC
                     break;
 
                 case 5:
-
+                    FileIO.Fifth(lines, file);
                     break;
 
                 case 6:
