@@ -23,6 +23,8 @@ namespace FileIOC
             System.IO.StreamWriter file = new System.IO.StreamWriter(outPath);
             FileIO x = new FileIO();
             x.odds(lines, file);
+            VanessaEveryFifth y = new VanessaEveryFifth();
+            y.Fifth(lines, file);
         }
     }
 }

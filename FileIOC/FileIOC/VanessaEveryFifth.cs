@@ -8,7 +8,7 @@ namespace FileIOC
 {
     public class VanessaEveryFifth
     {
-        public void Fifth(string[] lines, System.IO.StreamWriter file)
+        public static void Fifth(string[] lines, System.IO.StreamWriter file)
         {
             int counter = 0;
             string[] answer = new string[lines.Length % 5];
