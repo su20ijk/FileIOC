@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace FileIOC
+namespace FileIO
 {
     public class FileIO
     {
