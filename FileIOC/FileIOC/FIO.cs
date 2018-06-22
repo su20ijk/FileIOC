@@ -8,29 +8,20 @@ namespace FileIOC
 {
     public class FIO
     {
-        public static void DivThree(string filePath ,string path)
+        public static void DivThree(string[] lines, StreamWriter file)
         {
             string outputNum = "";
-            using (StreamReader sr = File.OpenText(filePath))
+            for (int i=0; i<lines.Length;i++)
             {
-                if (sr.ToString() != null)
-                { 
-                    string s = "";
-                    do
-                    {
-                        s = sr.ReadLine();
-                        int x = 0;
-                        Int32.TryParse(s, out x);
-                        if (x % 3 == 0) 
-                        {
-                            outputNum += x + "\n";
-                        }
-                    } while (s != null);
-                }
+            Int32.TryParse(lines[i], out int x);
+            if (x % 3 == 0)
+            {
+                outputNum += x + "\n";
             }
-            using (StreamWriter file = new System.IO.StreamWriter(path+"/Results.txt"))
+            }
+            using (file)
             {
-                file.WriteLine(outputNum); 
+                file.WriteLine(outputNum);
             }
         }
     }
