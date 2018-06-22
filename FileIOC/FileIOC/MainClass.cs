@@ -44,8 +44,7 @@ namespace FileIOC
                     break;
 
                 case 5:
-                    VanessaEveryFifth y = new VanessaEveryFifth();
-                    y.Fifth(lines);
+                    FileIO.Fifth(lines, file);
                     break;
 
                 case 6:
